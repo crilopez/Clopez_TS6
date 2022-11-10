@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXACristianLopez.View.Pag1">
+
+    <NavigationPage.TitleView>
+        <Label Text="Lista de Usuarios" TextColor="White" FontAttributes="Bold" Margin="-57,0,0,0" FontSize="24" HorizontalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Pag1" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="24"/>
+            <Label x:Name="lblParametros" Text=""  HorizontalTextAlignment="Start" FontSize="18"/>
+
+            <Label Text="Consumir WebService GET"  HorizontalTextAlignment="Center" FontSize="18"/>
+
+
+
+            <ListView x:Name="ListViewUsuarios">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="lblnombre" Text="{Binding usr_nombre}"> </Label>
+                                <Label x:Name="lblapellido" Text="{Binding usr_apellido}"></Label>
+                            </StackLayout>
+                        </ViewCell>  
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btn1"  Text="INGRESAR" Clicked="btn1_Clicked"/>
+            <Button x:Name="btn2"  Text="ACTUALIZAR" Clicked="btn2_Clicked"/>
+            <Button x:Name="btn3"  Text="ELIMNAR" Clicked="btn3_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

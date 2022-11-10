@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXACristianLopez.View.Page4"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Eliminar Usuario" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="24"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese el código a Eliminar" Grid.Row="0" Grid.ColumnSpan="2" FontSize="24"/>
+                <Entry x:Name="txtdel" Placeholder="código" Keyboard="Numeric" Grid.Row="1" Grid.ColumnSpan="2"/>
+                <Button x:Name="BtnDEL"  Text="ELIMINAR" Clicked="BtnDEL_Clicked" Grid.Row="3" Grid.Column="0"/>
+                <Button x:Name="btnREG"  Text="CANCELAR" Clicked="btnREG_Clicked" Grid.Row="3" Grid.Column="1"/>
+
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

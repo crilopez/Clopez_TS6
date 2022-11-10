@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXACristianLopez.View.Page3"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Modificación de Usuarios" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="24"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese el código" Grid.Row="0" Grid.Column="0" FontSize="24"/>
+                <Entry x:Name="txtcodigo" Placeholder="código" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Ingrese el nombre" Grid.Row="1" Grid.Column="0" FontSize="24"/>
+                <Entry x:Name="txtnombre" Placeholder="nombre" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Ingrese el apellido" Grid.Row="2" Grid.Column="0" FontSize="24"/>
+                <Entry x:Name="txtapellido" Placeholder="apellido" Grid.Row="2" Grid.Column="1"/>
+
+                <Button x:Name="BtnUpdate"  Text="ACTUALIZAR" Clicked="BtnUpdate_Clicked" Grid.Row="4" Grid.Column="0"/>
+                <Button x:Name="btnReg"  Text="CANCELAR" Clicked="btnReg_Clicked" Grid.Row="4" Grid.Column="1"/>
+
+            </Grid>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

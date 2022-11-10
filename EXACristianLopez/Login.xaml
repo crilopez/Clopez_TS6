@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXACristianLopez.Login">
+
+    <NavigationPage.TitleView>
+
+        <Label Text="CLASE REST" TextColor="White" FontAttributes="Bold" FontSize="24" HorizontalTextAlignment="Center"/>
+
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            
+            
+            <Grid>
+
+                <Image Source="light" Aspect="AspectFill"/>
+                <!-- <BoxView Color="Green" Opacity="0.5"/> -->
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>  <!-- fila 0-->
+                        <RowDefinition Height="*" />    <!-- fila 1-->
+                        <RowDefinition Height="Auto" /> <!-- fila 2-->
+                    </Grid.RowDefinitions>
+
+                    <Label Text="BIENVENIDO" HorizontalTextAlignment="Center" TextColor="White" FontSize="34" />
+                    <Image Source="logo" Grid.Row="0" HeightRequest="90"  WidthRequest="90" Margin="0,80,0,0"/>
+
+
+                    <StackLayout Grid.Row="1" Padding="30,150">
+                        <Entry x:Name="txtUsuario" Placeholder="Ingrese el correo electrónico" PlaceholderColor="White"  />
+                        <Entry x:Name="txtContrasena" Placeholder="Contraseña" IsPassword="True" PlaceholderColor="White" />
+                        <Button x:Name="btnIniciar" Text="INICIAR" Clicked="btnIniciar_Clicked" TextColor="White" BackgroundColor="Blue" CornerRadius="50"/>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="¿Recuperar contraseña?" TextColor="Black" FontSize="12" />
+                            <Label Text="Registrarse" TextColor="black" FontSize="12" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                        <Label Text="Iniciar Sesión con:" HorizontalTextAlignment="Center" TextColor="black" FontSize="12" />
+
+                        <StackLayout Orientation="Horizontal" Grid.Row="0">
+                            <Image Source="logotw"  HeightRequest="30"  WidthRequest="30" />
+                            <Image Source="logofb"  HeightRequest="50"  WidthRequest="50" />
+                            <Image Source="logogoo"  HeightRequest="30"  WidthRequest="30" />
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
